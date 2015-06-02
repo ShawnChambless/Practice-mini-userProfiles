@@ -1,0 +1,16 @@
+doctype html
+html(ng-app="miniProfile")
+    head
+        title Mini Profile
+        link(rel='stylesheet' href='styles/main.css')
+    body(ng-controller='mainCtrl')
+        div(ng-repeat='user in users')
+            h1 {{user.first_name}} {{user.last_name}}
+            img(src='{{user.avatar}}')
+            hr
+
+
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js')
+        script(src='scripts/app.js')
+        script(src='scripts/controller.js')
+        script(src='scripts/service.js')
